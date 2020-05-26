@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import time, os
 
-F_URL = './data/연령별인구_2004.csv'  # 파일 URL
+F_URL = './data/202004.csv'  # 파일 URL
 # 천의 자리 구분 콤마 빼고 CSV파일 불러오기
 df = pd.read_csv(F_URL, encoding='cp949', thousands=',')
 
@@ -52,5 +52,3 @@ def index():
         return render_template('result.html', city=city, image_file=f'image/myFile_{city}.png')
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8001, debug=True)
