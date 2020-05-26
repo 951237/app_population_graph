@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="result"></div>
-<h1>{{city}} 인구분포</h1>
-<p >남자 : {{sum_man}}명 / 여자 : {{sum_woman}}명 / 전체 : {{sum_all}}명</p>
+<div class="result">
+    <h1>{{city}} 인구분포</h1>
+    <p>남자 : {{sum_man}}명 / 여자 : {{sum_woman}}명 / 전체 : {{sum_all}}명</p>
+</div>
 <div>
     {% if True %}
     <img class="graph" src="{{ url_for('static', filename=image_file) }}">
