@@ -29,6 +29,9 @@ def index():
 
         df_man = df_city.iloc[:, 3:104]  # 남자 인구부분만 선택
         df_woman = df_city.iloc[:, 106:208]  # 여자 인구부분만 선택
+        sum_man = df_city.iloc[0, 1]
+        sum_woman = df_city.iloc[0, 104]
+        sum_all = df_city.iloc[0, 1] + df_city.iloc[0, 104] # 남자인구 + 여자인구
         time.sleep(0.5)
 
         man = df_man.T  # 데이터 프레임 행렬 바꾸
@@ -43,12 +46,19 @@ def index():
 
         plt.figure(figsize=(14, 7), dpi=150)
         plt.plot(df_merge)
-        df_merge.plot(figsize=(8, 4))
+        ax = df_merge.plot(figsize=(8, 4))
+        ax.set_xlabel("Age")
+        ax.set_ylabel("Count")
+
         plt.draw()
         fig = plt.gcf()
         fig.savefig(f'./static/image/myFile_{city}.png', dpi=fig.dpi)
         time.sleep(3)
         # return render_template('result.html', city=city, data=df_merge.to_html())
-        return render_template('result.html', city=city, image_file=f'image/myFile_{city}.png')
+        return render_template('result.html', city=city, sum_man=sum_man, sum_woman=sum_woman,sum_all=sum_all, image_file=f'image/myFile_{city}.png')
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8002, debug=True)
 
 
