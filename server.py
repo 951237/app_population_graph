@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import time, os
 
-F_URL = './data/202004.csv'  # 파일 URL
+F_URL = './data/202005.csv'  # 파일 URL
 # 천의 자리 구분 콤마 빼고 CSV파일 불러오기
 df = pd.read_csv(F_URL, encoding='cp949', thousands=',')
 
