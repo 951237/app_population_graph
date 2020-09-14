@@ -1,10 +1,30 @@
-.graph {
+/* 초기화 */
+* { margin: 0; padding: 0;}
+body {font-family: 'Helvetica', sans-serif;}
+li { list-style: none;}
+a { text-decoration: none;}
+
+/* 헤더 */
+
+/* 본문 */
+#section_header{ padding: 20px; }
+#section_article{ padding: 10px; }
+#section_graph {
    resize: both; /* 이미지 최대 사이즈에 적용 */
    float: center; /* 가운데 정렬 */
    max-width: 1000px; /* 넓이를 지정 */
    height: auto; /* 높이를 지정 */
    margin: 5px 0; /* 여백을 적용 4가지 조건이 가능 위쪽, 오른쪽, 아래쪽, 왼쪽 순서 */
-
 }
+
+/* 푸터 */
+#main_footer{ 
+   padding: 10px;
+   border-top: 3px solid black;
+   text-align: center;
+}
+
+/* 그래프 */
+
 
 
