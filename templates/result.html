@@ -1,19 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="result">
-    <h1>{{city}} 인구분포</h1>
-    <p>남자 : {{sum_man}}명 / 여자 : {{sum_woman}}명 / 전체 : {{sum_all}}명</p>
-</div>
-<div>
-    {% if True %}
-    <img class="graph" src="{{ url_for('static', filename=image_file) }}">
-    {% endif %}
-    <span class="">
-        <button class="btn btn-primary" onclick="location.href='/'"">다시 조회하기</button>
-    </span>
-</div>
+    <div id="section_result">
+        <h1>{{ city }} 인구분포 결과</h1>
+        <p>남자 : {{ sum_man }}명 / 여자 : {{ sum_woman }}명 / 전체 : {{ sum_all }}명</p>
+
+        {% if True %}
+            <img id="graph" src="{{ url_for('static', filename=image_file) }}">
+        {% endif %}
+        <br><br>
+        <button class="btn btn-primary" onclick="location.href='/'"
+        ">다시 조회하기</button>
+    </div>
 
 
 
-<!--{{data | safe}}-->
+    <!--{{data | safe}}-->
 {% endblock %}

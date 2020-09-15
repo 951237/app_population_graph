@@ -1,15 +1,32 @@
 /* 초기화 */
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
 * { margin: 0; padding: 0;}
-body {font-family: 'Helvetica', sans-serif;}
+
+body {font-family: 'Cute Font', cursive;}
 li { list-style: none;}
 a { text-decoration: none;}
+
 
 /* 헤더 */
 
 /* 본문 */
-#section_header{ padding: 20px; }
-#section_article{ padding: 10px; }
-#section_graph {
+#section_header{ 
+   padding: 20px;
+   
+   /* 자손 위치 지정 */
+   position: relative;
+   text-align: center;
+}
+
+#section_header > h1{
+   color : red;
+}
+
+#section_article{
+   padding: 10px;
+   
+}
+#section_content {
    resize: both; /* 이미지 최대 사이즈에 적용 */
    float: center; /* 가운데 정렬 */
    max-width: 1000px; /* 넓이를 지정 */

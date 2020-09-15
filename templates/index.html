@@ -1,27 +1,27 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <form action="/" method="post">
-  <div class="form-group row container">
-    <label class="col-sm-3 col-form-label col-form-label-lg" for="colFormLabelLg">거주지</label>
-    <div class="col-sm-5">
-      <input class="form-control form-control-lg" name="city" placeholder="조회하고 싶은 동을 입력하시오." type="text">
+    <div id="section_search" class="form-group row container">
+        <label class="col-sm-2 col-form-label col-form-label-lg"
+               for="colFormLabelLg">거주지</label>
+        <div class="col-sm-7">
+            <input class="form-control form-control-lg" name="city" placeholder="조회하고 싶은 동을 입력하시오." type="text">
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-primary" type="submit">조회하기</button>
+        </div>
     </div>
-    <div class="col-sm-3">
-      <button class="btn btn-primary" type="submit">조회하기</button>
-    </div>
-  </div>
 </form>
 <P></P>
 
-<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">조회예시</h4>
-  <p>다음과 같은 방법로 조회할 수 있습니다.</p>
-  <hr>
-  <ul>
-    <li class="lead">특별시 및 광역시 : 서울특별시, 부산광역시 등등</li>
-    <li class="lead">시, 군 : 안산시, 상주시, 예천군</li>
-    <li class="lead">구 : 안산시 상록구, 서울특별시 영등포구 등등</li>
-    <li class="lead">동 : 새솔동, 해양동 등등</li>
-  </ul>
+<div id="section_disc" class="alert alert-success" role="alert">
+    <h4 class="alert-heading">조회예시</h4>
+    <p>다음과 같은 방법로 조회할 수 있습니다.</p>
+    <hr>
+    <ul>
+        <li class="lead">- 특별시 및 광역시 : 서울특별시, 부산광역시 등등</li>
+        <li class="lead">- 시, 군 : 안산시, 상주시, 예천군</li>
+        <li class="lead">- 구 : 안산시 상록구, 서울특별시 영등포구 등등</li>
+        <li class="lead">- 동 : 새솔동, 해양동 등등</li>
+    </ul>
 </div>
 {% endblock %}
